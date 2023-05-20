@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Weather</title>
+    <!-- Link the css file that is found in the css folder -->
+    <!-- Also add a favicon -->
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="icon" href="/img/weather.png" />
+  </head>
+
+  <body>
+    <h2>Weather Node</h2>
+  </body>
+</html>
+
+<!-- Main container -->
+<% if (weather == null) { %>
+<div class="container">
+  <% } else if (temp > 15) { %>
+  <div class="container warm">
+    <% } else { %>
+    <div class="container">
+      <% } %>
+      <!-- This shall hold the input fields and the output data -->
+      <fieldset>
+        <br />
+        <!-- This form shall be used to fetch your city name -->
+        <form action="/" method="post">
+          <input
+            type="text"
+            placeholder="Enter City ..."
+            name="city"
+            class="input"
+            required
+          />
+          <input type="submit" class="button" value="Search" />
+        </form>
+        <br />
+
+        <!-- Upon fetching of data, display it here -->
+        <%if(weather !== null){ %>
+        <div class="result">
+          <br />
+          <h3><%= place %></h3>
+          <p><%= timezone %></p>
+          <!-- Display weather data fetched by the app -->
+          <img src="<%= icon %>" alt="Weather-Icon" />
+          <h3>Weather: <%= description %></h3>
+          <p>Cloud coverage: <%= clouds %>%</p>
+          <p>Temp: <%= temp %>ºC</p>
+          <p>Min: <%= tempMin %>ºC / Max: <%= tempMax %>ºC</p>
+          <p>Visibility: <%= visibility %> meters</p>
+          <p>Humidity: <%= humidity %> g.m-3</p>
+          <p>Wind: <%= wind %> km/h</p>
+          <p>Pressure: <%= pressure %> N·m-2</p>
+          <br />
+        </div>
+        <% } %>
+
+        <!-- If Error in fetching data, display it here -->
+        <% if(error !== null){ %>
+        <p class="error"><%= error %></p>
+        <% } %>
+      </fieldset>
+    </div>
+  </div>
+</div>

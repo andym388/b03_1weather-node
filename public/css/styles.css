@@ -1,0 +1,66 @@
+body {
+  align-items: center;
+  text-align: center;
+  color: white;
+  font-family: arial;
+  font-size: 1.2rem;
+  font-weight: 600;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: rgb(8, 3, 46);
+}
+
+/* This will format the whole container content*/
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  height: 65vh;
+  background-image: url(/img/cold-bg.jpg);
+  background-size: cover;
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.container.warm {
+  background-image: url(/img/warm-bg.jpg);
+}
+
+/* This will format the whole fieldset content*/
+
+fieldset {
+  padding: 5px;
+}
+
+/* Format the input and button */
+
+.input {
+  font-size: 1.0rem;
+  font-weight: 600;
+  border: 1px solid #000000;
+  padding: 5px;
+}
+
+.button {
+  cursor: pointer;
+  font-size: 1.0rem;
+  font-weight: 600;
+  border: 1px solid #888888;
+  background: #888888;
+  color: white;
+  padding: 5px;
+}
+
+.result{
+  background:rgba(6, 6, 117, 0.4);
+}
+
+.error {
+  background:rgba(165, 21, 23, 0.3);
+  padding: 1rem;
+}
