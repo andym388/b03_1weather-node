@@ -2,12 +2,12 @@
   "name": "b03_1weather-node",
   "version": "1.0.0",
   "description": "Weather Node",
-  "main": "app.js",
+  "main": "index.js",
   "engines": {
     "node": "18.x"
   },
   "scripts": {
-    "start": "node src/app.js",
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
