@@ -16,7 +16,7 @@
 <!-- Main container -->
 <% if (weather == null) { %>
 <div class="container">
-  <% } else if (temp > 18) { %>
+  <% } else if (temp > 17) { %>
   <div class="container warm">
     <% } else { %>
     <div class="container">
@@ -50,9 +50,9 @@
           <p>Temp: <%= temp %>ºC</p>
           <p>Min: <%= tempMin %>ºC / Max: <%= tempMax %>ºC</p>
           <p>Visibility: <%= visibility %> meters</p>
-          <p>Humidity: <%= humidity %> g.m-3</p>
-          <p>Wind: <%= wind %> km/h</p>
-          <p>Pressure: <%= pressure %> N·m-2</p>
+          <p>Humidity: <%= humidity %>%</p>
+          <p>Wind speed: <%= wind %> m/s</p>
+          <p>Pressure: <%= pressure %> hPa</p>
           <br />
         </div>
         <% } %>

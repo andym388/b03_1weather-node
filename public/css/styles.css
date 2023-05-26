@@ -3,7 +3,7 @@ body {
   text-align: center;
   color: white;
   font-family: arial;
-  font-size: 1.2rem;
+  font-size: 1.0rem;
   font-weight: 600;
   max-width: 400px;
   margin: 0 auto;
@@ -19,7 +19,7 @@ body {
 .container {
   width: 100%;
   max-width: 400px;
-  height: 65vh;
+  height: 70vh;
   background-image: url(/img/cold-bg.jpg);
   background-size: cover;
   border-radius: 3px;

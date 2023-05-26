@@ -22,11 +22,11 @@ app.set("view engine", "ejs");
 
 // Setup the default display on launch
 app.get("/", (req, res) => {
-  // It will not fetch and display any data in the index page
+  // No Data will be fetch and displayed onto the index page
   res.render("index", { weather: null, error: null });
 });
 
-// On a post request, the app shall data from OpenWeatherMap using the given arguments
+// On a Post request, the app shall receieve data from OpenWeatherMap using the given arguments
 app.post("/", (req, res) => {
   // Get city name passed in the form
   let city = req.body.city;
@@ -35,7 +35,7 @@ app.post("/", (req, res) => {
   // Use the API_KEY in the '.env' file
   let url = `${apiURL}weather?q=${city}&units=metric&appid=${apiKey}`;
 
-  // Server-Side HTTP Request for data using the URL
+  // Make a Server-Side HTTPS Request for data using the URL
   request(url, (err, response, body) => {
     // On return, check the json data fetched
     if (err) {
