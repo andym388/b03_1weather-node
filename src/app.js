@@ -2,19 +2,22 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const request = require("postman-request");
+
+// Declare back-end framework: express to create our API
 const app = express();
 
 // Configure dotenv package
 require("dotenv").config();
 
 // Set up Port, OpenWeatherMap api Key and URL
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 5001;
 const apiKey = `${process.env.API_KEY}`;
 const apiURL = "https://api.openweathermap.org/data/2.5/";
 const iconURL = "https://openweathermap.org/img/w/";
 
+// Setup useful middleware: express
 // Serve static pages from the public directory, it will act as the root directory
-// Setup express app and body-parser configurations
+// Setup body-parser configurations
 // Setup javascript template view engine
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));

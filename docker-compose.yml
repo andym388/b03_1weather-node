@@ -1,0 +1,13 @@
+version: '2.19.0'
+
+services:
+  # Node App
+  docker-app:
+    build: .
+    ports: 
+      - 3001:3001
+    volumes:
+      - ./:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - PORT=3001
